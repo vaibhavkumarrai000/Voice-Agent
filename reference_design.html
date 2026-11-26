@@ -1,0 +1,570 @@
+<USER_REQUEST>
+<!DOCTYPE html><html lang="en" class="dark"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FortiVoice AI — Talk to Your Autonomous AI Sales Agent</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'success': '#22C55E',
+        'on-success': '#052E16',
+        'orb-indigo': '#6366F1',
+        'orb-cyan': '#22D3EE',
+        'orb-violet': '#A855F7',
+        'light-primary': '#4F46E5',
+        'light-on-primary': '#FFFFFF',
+        'light-primary-container': '#E0E7FF',
+        'light-on-primary-container': '#1E1B4B',
+        'light-secondary': '#475569',
+        'light-on-secondary': '#FFFFFF',
+        'light-secondary-container': '#F1F5F9',
+        'light-on-secondary-container': '#0F172A',
+        'light-tertiary': '#0891B2',
+        'light-on-tertiary': '#1E1E1E',
+        'light-tertiary-container': '#CFFAFE',
+        'light-on-tertiary-container': '#164E63',
+        'light-error': '#DC2626',
+        'light-on-error': '#FFFFFF',
+        'light-error-container': '#FEE2E2',
+        'light-on-error-container': '#7F1D1D',
+        'light-background': '#F8FAFC',
+        'light-on-background': '#0F172A',
+        'light-surface': '#F8FAFC',
+        'light-surface-dim': '#E2E8F0',
+        'light-surface-bright': '#FFFFFF',
+        'light-surface-container-lowest': '#FFFFFF',
+        'light-surface-container-low': '#F1F5F9',
+        'light-surface-container': '#E2E8F0',
+        'light-surface-container-high': '#CBD5E1',
+        'light-surface-container-highest': '#94A3B8',
+        'light-on-surface': '#0F172A',
+        'light-surface-variant': '#E2E8F0',
+        'light-on-surface-variant': '#475569',
+        'light-outline': '#64748B',
+        'light-outline-variant': '#CBD5E1',
+        'light-inverse-surface': '#090A0F',
+        'light-inverse-on-surface': '#F8FAFC',
+        'light-inverse-primary': '#818CF8',
+        'dark-primary': '#FFFFFF',
+        'dark-on-primary': '#090A0F',
+        'dark-primary-container': '#4F46E5',
+        'dark-on-primary-container': '#FFFFFF',
+        'dark-secondary': '#94A3B8',
+        'dark-on-secondary': '#090A0F',
+        'dark-secondary-container': '#1E2235',
+        'dark-on-secondary-container': '#E2E8F0',
+        'dark-tertiary': '#22D3EE',
+        'dark-on-tertiary': '#083344',
+        'dark-tertiary-container': '#164E63',
+        'dark-on-tertiary-container': '#CFFAFE',
+        'dark-error': '#F87171',
+        'dark-on-error': '#450A0A',
+        'dark-error-container': '#7F1D1D',
+        'dark-on-error-container': '#FECACA',
+        'dark-background': '#090A0F',
+        'dark-on-background': '#F8FAFC',
+        'dark-surface': '#090A0F',
+        'dark-surface-dim': '#06070B',
+        'dark-surface-bright': '#1A1D29',
+        'dark-surface-container-lowest': '#0D0E14',
+        'dark-surface-container-low': '#12141D',
+        'dark-surface-container': '#181B26',
+        'dark-surface-container-high': '#222636',
+        'dark-surface-container-highest': '#2D3247',
+        'dark-on-surface': '#F8FAFC',
+        'dark-surface-variant': '#1E2235',
+        'dark-on-surface-variant': '#94A3B8',
+        'dark-outline': '#64748B',
+        'dark-outline-variant': '#262A3B',
+        'dark-inverse-surface': '#F8FAFC',
+        'dark-inverse-on-surface': '#090A0F',
+        'dark-inverse-primary': '#4F46E5',
+      },
+      borderRadius: {
+        'sm': '8px',
+        'DEFAULT': '12px',
+        'md': '16px',
+        'lg': '20px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'page-margin': '32px',
+      },
+      fontFamily: {
+        'display': ['"Plus Jakarta Sans"', 'sans-serif'],
+        'headline': ['"Plus Jakarta Sans"', 'sans-serif'],
+        'title': ['"Inter"', 'sans-serif'],
+        'body': ['"Inter"', 'sans-serif'],
+        'label': ['"Inter"', 'sans-serif'],
+        'mono': ['"JetBrains Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['48px', { lineHeight: '54px', letterSpacing: '-1.2px', fontWeight: '700' }],
+        'display-lg-mobile': ['30px', { lineHeight: '36px', letterSpacing: '-0.6px', fontWeight: '700' }],
+        'headline-lg': ['32px', { lineHeight: '38px', letterSpacing: '-0.6px', fontWeight: '600' }],
+        'headline-lg-mobile': ['24px', { lineHeight: '30px', letterSpacing: '-0.3px', fontWeight: '600' }],
+        'headline-md': ['22px', { lineHeight: '28px', letterSpacing: '-0.2px', fontWeight: '600' }],
+        'title-lg': ['18px', { lineHeight: '24px', letterSpacing: '-0.1px', fontWeight: '600' }],
+        'title-md': ['15px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '600' }],
+        'body-lg': ['17px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['14px', { lineHeight: '21px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-sm': ['13px', { lineHeight: '18px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '600' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.1px', fontWeight: '500' }],
+        'mono-md': ['13px', { lineHeight: '18px', letterSpacing: '0px', fontWeight: '500' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.1px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '260ms',
+        'surface-exit': '180ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      line-height: 1 !important;
+      box-sizing: content-box;
+      overflow: hidden;
+      white-space: nowrap;
+      direction: ltr;
+      vertical-align: middle;
+    }
+    @keyframes orb-breathe {
+      0%, 100% { transform: scale(1); opacity: 0.72; }
+      50% { transform: scale(1.06); opacity: 0.95; }
+    }
+    @keyframes ring-pulse {
+      0%, 100% { transform: scale(1); opacity: 0.35; }
+      50% { transform: scale(1.08); opacity: 0.65; }
+    }
+    .orb-active .orb-core {
+      animation: orb-breathe 2.4s ease-in-out infinite;
+    }
+    .orb-active .orb-ring-1 {
+      animation: ring-pulse 2.2s ease-in-out infinite;
+    }
+    .orb-active .orb-ring-2 {
+      animation: ring-pulse 2.8s ease-in-out infinite 0.35s;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .orb-active .orb-core,
+      .orb-active .orb-ring-1,
+      .orb-active .orb-ring-2 {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body class="bg-light-surface dark:bg-dark-surface text-light-on-surface dark:text-dark-on-surface font-body antialiased selection:bg-orb-indigo/30">
+  <div class="min-h-[1024px] flex flex-col justify-between relative overflow-x-hidden" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+    <!-- 1. Minimal Top Navigation Bar -->
+    <header class="w-full z-20">
+      <div class="max-w-7xl mx-auto px-gutter-md md:px-page-margin h-16 flex items-center justify-between gap-gutter-md">
+        <!-- Left: Wordmark with glowing dot icon -->
+        <a href="#top" class="inline-flex items-center gap-gutter-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-orb-indigo rounded-sm">
+          <span class="relative flex items-center justify-center w-3 h-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-orb-cyan shadow-[0_0_12px_rgba(34,211,238,0.9)]"></span>
+          </span>
+          <span data-design-text-token="title-lg" class="font-headline text-title-lg text-light-on-surface dark:text-dark-on-surface tracking-tight">FortiVoice AI</span>
+        </a>
+
+        <!-- Right: Segmented Language Toggle + Ghost CRM & Insights Button -->
+        <div class="flex items-center gap-gutter-sm md:gap-gutter-md">
+          <div role="group" aria-label="Agent language" class="inline-flex items-center bg-light-surface-container-low dark:bg-dark-surface-container-low border border-light-outline-variant dark:border-dark-outline-variant rounded-full p-1">
+            <button id="lang-en" type="button" onclick="setLanguage(&#39;en&#39;)" aria-pressed="true" class="px-3 py-1 rounded-full font-label text-label-sm bg-light-surface-container-high dark:bg-dark-surface-container-high text-light-on-surface dark:text-dark-on-surface transition-colors duration-state-change ease-state-change">
+              <span data-design-text-token="label-sm">English</span>
+            </button>
+            <button id="lang-hi" type="button" onclick="setLanguage(&#39;hi&#39;)" aria-pressed="false" class="px-3 py-1 rounded-full font-label text-label-sm text-light-on-surface-variant dark:text-dark-on-surface-variant hover:text-light-on-surface dark:hover:text-dark-on-surface transition-colors duration-state-change ease-state-change">
+              <span data-design-text-token="label-sm">हिंदी</span>
+            </button>
+          </div>
+
+          <!-- COMPONENT: button-secondary -->
+          <button data-component-id="button-secondary" data-component-type="button" data-component-variant="secondary" type="button" onclick="toggleCrmDrawer(true)" class="inline-flex items-center justify-center gap-gutter-sm bg-light-surface-container-low/70 dark:bg-dark-surface-container-low/70 text-light-on-surface dark:text-dark-on-surface border border-light-outline-variant dark:border-dark-outline-variant px-gutter-md py-1.5 rounded-full font-label text-label-sm hover:bg-light-surface-container dark:hover:bg-dark-surface-container transition-colors duration-state-change ease-state-change">
+            <span data-design-text-token="label-sm">CRM &amp; Insights</span>
+            <span id="crm-badge" data-design-text-token="mono-sm" class="inline-flex items-center justify-center min-w-5 h-5 px-1.5 rounded-full bg-orb-indigo/20 text-dark-tertiary font-mono text-mono-sm tabular-nums">3</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. Centered Hero Stage (~70% viewport focus) -->
+    <main id="top" class="flex-1 flex flex-col items-center justify-center px-gutter-md md:px-page-margin py-gutter-lg">
+      <div class="w-full max-w-2xl mx-auto flex flex-col items-center text-center gap-gutter-lg">
+
+        <!-- Headline & 1-line Subtitle -->
+        <div class="flex flex-col items-center gap-gutter-sm">
+          <!-- COMPONENT: typography-display -->
+          <h1 data-component-id="typography-display" data-component-type="typography" data-component-variant="display" data-design-text-token="display-lg" class="font-display text-display-lg-mobile md:text-display-lg text-light-on-surface dark:text-dark-on-surface text-balance">Talk to Your Autonomous AI Sales Agent</h1>
+
+          <!-- COMPONENT: typography-body -->
+          <p data-component-id="typography-body" data-component-type="typography" data-component-variant="body" data-design-text-token="body-lg" class="font-body text-body-lg text-light-on-surface-variant dark:text-dark-on-surface-variant text-pretty max-w-xl">Ask anything in English or Hindi — instant answers, zero wait time.</p>
+        </div>
+
+        <!-- Centerpiece Visual: 3D-style Glassmorphic Voice Orb + Concentric Audio-Wave Rings -->
+        <div id="voice-orb-stage" class="relative flex items-center justify-center w-64 h-64 my-gutter-xs" aria-hidden="true">
+          <!-- Ambient Outer Glow -->
+          <div class="absolute inset-2 rounded-full bg-gradient-to-tr from-orb-indigo/25 via-orb-violet/20 to-orb-cyan/25 blur-2xl"></div>
+
+          <!-- Concentric Audio-Wave Rings -->
+          <div class="orb-ring-2 absolute w-60 h-60 rounded-full border border-orb-violet/25"></div>
+          <div class="orb-ring-1 absolute w-48 h-48 rounded-full border border-orb-cyan/35"></div>
+          <div class="absolute w-40 h-40 rounded-full border border-orb-indigo/45"></div>
+
+          <!-- 3D Glassmorphic Core Orb -->
+          <div class="orb-core relative w-32 h-32 rounded-full bg-gradient-to-br from-orb-cyan/80 via-orb-indigo/85 to-orb-violet/90 p-px shadow-[0_0_48px_rgba(99,102,241,0.45)] flex items-center justify-center">
+            <div class="w-full h-full rounded-full bg-gradient-to-b from-dark-on-surface/20 via-orb-indigo/30 to-dark-surface/70 backdrop-blur-md flex items-center justify-center relative overflow-hidden">
+              <!-- Specular highlight -->
+              <div class="absolute top-2 left-4 w-14 h-7 rounded-full bg-dark-on-surface/25 blur-sm -rotate-12"></div>
+              <span id="orb-icon" class="material-symbols-outlined text-display-lg text-dark-on-surface/90">graphic_eq</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Status Pill + Primary CTA Button -->
+        <div class="flex flex-col items-center gap-gutter-md">
+          <div class="inline-flex items-center gap-gutter-sm px-3.5 py-1 rounded-full bg-light-surface-container-low dark:bg-dark-surface-container-low border border-light-outline-variant dark:border-dark-outline-variant">
+            <span id="status-dot" class="w-2 h-2 rounded-full bg-success"></span>
+            <!-- COMPONENT: typography-label -->
+            <span id="status-pill-text" data-component-id="typography-label" data-component-type="typography" data-component-variant="label" data-design-text-token="label-sm" class="font-label text-label-sm text-light-on-surface-variant dark:text-dark-on-surface-variant">Ready • Bilingual EN/HI</span>
+          </div>
+
+          <!-- COMPONENT: button-with-icon -->
+          <button id="voice-cta-btn" data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" type="button" onclick="toggleVoiceCall()" class="inline-flex items-center justify-center gap-gutter-sm bg-light-primary dark:bg-dark-primary text-light-on-primary dark:text-dark-on-primary px-gutter-xl py-3.5 rounded-full font-label text-label-lg shadow-[0_8px_28px_rgba(99,102,241,0.28)] hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orb-indigo active:scale-95 transition-all duration-state-change ease-state-change">
+            <span id="voice-cta-icon" class="material-symbols-outlined text-title-lg" aria-hidden="true">mic</span>
+            <span id="voice-cta-label" data-design-text-token="label-lg">Start Voice Call</span>
+          </button>
+        </div>
+
+        <!-- 3. Live Caption Card (Latest 2 lines only + Full Transcript link) -->
+        <!-- COMPONENT: card-elevated -->
+        <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="w-full max-w-xl bg-light-surface-container-low/80 dark:bg-dark-surface-container-low/80 backdrop-blur-md border border-light-outline-variant dark:border-dark-outline-variant rounded-md px-gutter-lg py-gutter-md text-left flex flex-col gap-gutter-sm">
+          <header class="flex items-center justify-between gap-gutter-md">
+            <div class="flex items-center gap-gutter-sm">
+              <span data-design-text-token="label-sm" class="font-label text-label-sm text-light-on-surface-variant dark:text-dark-on-surface-variant">Live Captions</span>
+              <span id="caption-lang-tag" data-design-text-token="mono-sm" class="font-mono text-mono-sm text-dark-tertiary">EN / HI</span>
+            </div>
+            <button type="button" onclick="toggleTranscriptModal(true)" class="font-label text-label-sm text-dark-tertiary hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-orb-indigo rounded-sm">
+              <span data-design-text-token="label-sm">Full Transcript</span>
+            </button>
+          </header>
+
+          <div class="flex flex-col gap-gutter-xs">
+            <p id="caption-line-1" data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface-variant dark:text-dark-on-surface-variant truncate">
+              <span class="font-semibold text-light-on-surface dark:text-dark-on-surface">User:</span> Does FortiVoice integrate with HubSpot and support Hindi?
+            </p>
+            <p id="caption-line-2" data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface dark:text-dark-on-surface truncate">
+              <span class="font-semibold text-dark-tertiary">FortiVoice:</span> Yes — native HubSpot sync and natural EN/HI voice switching in 380ms.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </main>
+
+    <!-- 4. Bottom Dock Bar -->
+    <footer class="w-full pb-gutter-lg pt-gutter-sm px-gutter-md md:px-page-margin z-20">
+      <div class="max-w-2xl mx-auto flex flex-col items-center gap-gutter-md">
+        <!-- Three Quick-Prompt Chips -->
+        <div class="flex flex-wrap items-center justify-center gap-gutter-sm">
+          <!-- COMPONENT: chip-action -->
+          <button data-component-id="chip-action" data-component-type="chip" data-component-variant="action" type="button" onclick="sendQuickPrompt(&#39;Pricing vs HubSpot?&#39;)" class="inline-flex items-center gap-gutter-xs bg-light-surface-container-low/80 dark:bg-dark-surface-container-low/80 text-light-on-surface-variant dark:text-dark-on-surface-variant border border-light-outline-variant dark:border-dark-outline-variant px-gutter-md py-1.5 rounded-full font-label text-label-sm hover:text-light-on-surface dark:hover:text-dark-on-surface hover:bg-light-surface-container dark:hover:bg-dark-surface-container transition-colors duration-state-change ease-state-change">
+            <span data-design-text-token="label-sm">Pricing vs HubSpot?</span>
+          </button>
+
+          <button data-component-id="chip-action" data-component-type="chip" data-component-variant="action" type="button" onclick="sendQuickPrompt(&#39;SOC2 Security?&#39;)" class="inline-flex items-center gap-gutter-xs bg-light-surface-container-low/80 dark:bg-dark-surface-container-low/80 text-light-on-surface-variant dark:text-dark-on-surface-variant border border-light-outline-variant dark:border-dark-outline-variant px-gutter-md py-1.5 rounded-full font-label text-label-sm hover:text-light-on-surface dark:hover:text-dark-on-surface hover:bg-light-surface-container dark:hover:bg-dark-surface-container transition-colors duration-state-change ease-state-change">
+            <span data-design-text-token="label-sm">SOC2 Security?</span>
+          </button>
+
+          <button data-component-id="chip-action" data-component-type="chip" data-component-variant="action" type="button" onclick="sendQuickPrompt(&#39;Book a demo tomorrow&#39;)" class="inline-flex items-center gap-gutter-xs bg-light-surface-container-low/80 dark:bg-dark-surface-container-low/80 text-light-on-surface-variant dark:text-dark-on-surface-variant border border-light-outline-variant dark:border-dark-outline-variant px-gutter-md py-1.5 rounded-full font-label text-label-sm hover:text-light-on-surface dark:hover:text-dark-on-surface hover:bg-light-surface-container dark:hover:bg-dark-surface-container transition-colors duration-state-change ease-state-change">
+            <span data-design-text-token="label-sm">Book a demo tomorrow</span>
+          </button>
+        </div>
+
+        <!-- Minimal Rounded Text Input Bar -->
+        <form onsubmit="handlePromptSubmit(event)" class="w-full relative flex items-center">
+          <label for="dock-input" class="sr-only">Ask FortiVoice AI</label>
+          <input id="dock-input" type="text" placeholder="Type a question in English or हिंदी..." class="w-full bg-light-surface-container-low/90 dark:bg-dark-surface-container-low/90 backdrop-blur-md border border-light-outline-variant dark:border-dark-outline-variant rounded-full pl-gutter-lg pr-14 py-3 font-body text-body-md text-light-on-surface dark:text-dark-on-surface placeholder:text-light-outline dark:placeholder:text-dark-outline focus:border-orb-indigo focus:ring-1 focus:ring-orb-indigo">
+          <!-- COMPONENT: button-icon -->
+          <button data-component-id="button-icon" data-component-type="button" data-component-variant="icon" type="submit" aria-label="Send message" class="absolute right-2 inline-flex items-center justify-center w-9 h-9 rounded-full bg-light-primary dark:bg-dark-primary text-light-on-primary dark:text-dark-on-primary hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orb-indigo transition-opacity duration-state-change ease-state-change">
+            <span class="material-symbols-outlined text-title-lg" aria-hidden="true">arrow_upward</span>
+          </button>
+        </form>
+      </div>
+    </footer>
+
+    <!-- Optional Slide-Over CRM & Lead Insights Drawer (Hidden by default) -->
+    <div id="crm-drawer-backdrop" onclick="toggleCrmDrawer(false)" class="hidden fixed inset-0 bg-dark-surface-dim/70 backdrop-blur-sm z-40"></div>
+    <aside id="crm-drawer" aria-label="CRM and Lead Insights" class="hidden fixed top-0 right-0 h-full w-full max-w-md bg-light-surface-container-low dark:bg-dark-surface-container-low border-l border-light-outline-variant dark:border-dark-outline-variant z-50 p-gutter-lg flex flex-col justify-between overflow-y-auto">
+      <div class="flex flex-col gap-gutter-lg">
+        <div class="flex items-center justify-between pb-gutter-md border-b border-light-outline-variant dark:border-dark-outline-variant">
+          <div class="flex flex-col gap-gutter-xs">
+            <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-light-on-surface dark:text-dark-on-surface">CRM &amp; Lead Insights</h2>
+            <p data-design-text-token="body-sm" class="font-body text-body-sm text-light-on-surface-variant dark:text-dark-on-surface-variant">Auto-captured from live voice &amp; chat</p>
+          </div>
+          <button type="button" onclick="toggleCrmDrawer(false)" aria-label="Close CRM drawer" class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-light-outline-variant dark:border-dark-outline-variant text-light-on-surface-variant dark:text-dark-on-surface-variant hover:text-light-on-surface dark:hover:text-dark-on-surface">
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">close</span>
+          </button>
+        </div>
+
+        <!-- Lead Qualification Summary -->
+        <div class="bg-light-surface-container dark:bg-dark-surface-container border border-light-outline-variant dark:border-dark-outline-variant rounded-md p-gutter-md flex flex-col gap-gutter-md">
+          <div class="flex items-center justify-between">
+            <span data-design-text-token="label-sm" class="font-label text-label-sm text-light-on-surface-variant dark:text-dark-on-surface-variant">Intent Score</span>
+            <span data-design-text-token="mono-md" class="font-mono text-mono-md text-success tabular-nums">92 / 100 · High</span>
+          </div>
+          <dl class="grid grid-cols-2 gap-gutter-md pt-gutter-sm border-t border-light-outline-variant dark:border-dark-outline-variant">
+            <div class="flex flex-col gap-gutter-xs">
+              <dt data-design-text-token="label-sm" class="font-label text-label-sm text-light-on-surface-variant dark:text-dark-on-surface-variant">CRM Target</dt>
+              <dd data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface dark:text-dark-on-surface">HubSpot Enterprise</dd>
+            </div>
+            <div class="flex flex-col gap-gutter-xs">
+              <dt data-design-text-token="label-sm" class="font-label text-label-sm text-light-on-surface-variant dark:text-dark-on-surface-variant">Language</dt>
+              <dd data-design-text-token="mono-md" class="font-mono text-mono-md text-light-on-surface dark:text-dark-on-surface">EN + HI</dd>
+            </div>
+            <div class="flex flex-col gap-gutter-xs">
+              <dt data-design-text-token="label-sm" class="font-label text-label-sm text-light-on-surface-variant dark:text-dark-on-surface-variant">Next Action</dt>
+              <dd data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface dark:text-dark-on-surface">Demo tomorrow</dd>
+            </div>
+            <div class="flex flex-col gap-gutter-xs">
+              <dt data-design-text-token="label-sm" class="font-label text-label-sm text-light-on-surface-variant dark:text-dark-on-surface-variant">Security Check</dt>
+              <dd data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface dark:text-dark-on-surface">SOC 2 Type II</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Synced Events -->
+        <div class="flex flex-col gap-gutter-sm">
+          <h3 data-design-text-token="title-md" class="font-title text-title-md text-light-on-surface dark:text-dark-on-surface">Recent CRM Signals</h3>
+          <div class="bg-light-surface-container dark:bg-dark-surface-container border border-light-outline-variant dark:border-dark-outline-variant rounded-md p-gutter-md flex flex-col gap-gutter-xs">
+            <span data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface dark:text-dark-on-surface">HubSpot integration &amp; bilingual support verified</span>
+            <span data-design-text-token="mono-sm" class="font-mono text-mono-sm text-light-on-surface-variant dark:text-dark-on-surface-variant">Synced 12s ago</span>
+          </div>
+          <div class="bg-light-surface-container dark:bg-dark-surface-container border border-light-outline-variant dark:border-dark-outline-variant rounded-md p-gutter-md flex flex-col gap-gutter-xs">
+            <span data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface dark:text-dark-on-surface">Demo calendar hold: Thu 10:30 AM IST / 9:00 AM PST</span>
+            <span data-design-text-token="mono-sm" class="font-mono text-mono-sm text-light-on-surface-variant dark:text-dark-on-surface-variant">Pending email confirmation</span>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" onclick="toggleCrmDrawer(false)" class="w-full mt-gutter-lg py-3 rounded-full bg-light-primary dark:bg-dark-primary text-light-on-primary dark:text-dark-on-primary font-label text-label-lg hover:opacity-90 transition-opacity duration-state-change ease-state-change">
+        <span data-design-text-token="label-lg">Back to Voice Stage</span>
+      </button>
+    </aside>
+
+    <!-- Full Transcript Modal (Hidden by default) -->
+    <div id="transcript-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-gutter-md bg-dark-surface-dim/75 backdrop-blur-sm">
+      <div class="w-full max-w-lg bg-light-surface-container-low dark:bg-dark-surface-container-low border border-light-outline-variant dark:border-dark-outline-variant rounded-lg p-gutter-lg flex flex-col gap-gutter-md">
+        <div class="flex items-center justify-between pb-gutter-sm border-b border-light-outline-variant dark:border-dark-outline-variant">
+          <h2 data-design-text-token="title-lg" class="font-headline text-title-lg text-light-on-surface dark:text-dark-on-surface">Full Conversation Transcript</h2>
+          <button type="button" onclick="toggleTranscriptModal(false)" aria-label="Close transcript" class="inline-flex items-center justify-center w-8 h-8 rounded-full border border-light-outline-variant dark:border-dark-outline-variant text-light-on-surface-variant dark:text-dark-on-surface-variant">
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">close</span>
+          </button>
+        </div>
+        <div id="transcript-history" class="flex flex-col gap-gutter-sm max-h-72 overflow-y-auto">
+          <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface-variant dark:text-dark-on-surface-variant">
+            <span class="font-semibold text-light-on-surface dark:text-dark-on-surface">User:</span> Does FortiVoice integrate with HubSpot and support Hindi?
+          </p>
+          <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface dark:text-dark-on-surface">
+            <span class="font-semibold text-dark-tertiary">FortiVoice:</span> Yes — native HubSpot sync and natural EN/HI voice switching in 380ms.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    let currentLang = 'en';
+    let callActive = false;
+    let callSeconds = 0;
+    let callTimer = null;
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      const enBtn = document.getElementById('lang-en');
+      const hiBtn = document.getElementById('lang-hi');
+      const statusText = document.getElementById('status-pill-text');
+      const line1 = document.getElementById('caption-line-1');
+      const line2 = document.getElementById('caption-line-2');
+
+      if (lang === 'hi') {
+        hiBtn.setAttribute('aria-pressed', 'true');
+        enBtn.setAttribute('aria-pressed', 'false');
+        hiBtn.classList.add('bg-light-surface-container-high', 'dark:bg-dark-surface-container-high', 'text-light-on-surface', 'dark:text-dark-on-surface');
+        hiBtn.classList.remove('text-light-on-surface-variant', 'dark:text-dark-on-surface-variant');
+        enBtn.classList.remove('bg-light-surface-container-high', 'dark:bg-dark-surface-container-high', 'text-light-on-surface', 'dark:text-dark-on-surface');
+        enBtn.classList.add('text-light-on-surface-variant', 'dark:text-dark-on-surface-variant');
+        if (!callActive) statusText.textContent = 'तैयार • Bilingual HI/EN';
+        line1.innerHTML = '<span class="font-semibold text-light-on-surface dark:text-dark-on-surface">User:</span> क्या FortiVoice हिंदी में डेमो बुक कर सकता है?';
+        line2.innerHTML = '<span class="font-semibold text-dark-tertiary">FortiVoice:</span> जी हाँ! मैं हिंदी और अंग्रेज़ी दोनों में आपके सवालों का जवाब दे सकता हूँ और तुरंत मीटिंग शेड्यूल कर सकता हूँ।';
+      } else {
+        enBtn.setAttribute('aria-pressed', 'true');
+        hiBtn.setAttribute('aria-pressed', 'false');
+        enBtn.classList.add('bg-light-surface-container-high', 'dark:bg-dark-surface-container-high', 'text-light-on-surface', 'dark:text-dark-on-surface');
+        enBtn.classList.remove('text-light-on-surface-variant', 'dark:text-dark-on-surface-variant');
+        hiBtn.classList.remove('bg-light-surface-container-high', 'dark:bg-dark-surface-container-high', 'text-light-on-surface', 'dark:text-dark-on-surface');
+        hiBtn.classList.add('text-light-on-surface-variant', 'dark:text-dark-on-surface-variant');
+        if (!callActive) statusText.textContent = 'Ready • Bilingual EN/HI';
+        line1.innerHTML = '<span class="font-semibold text-light-on-surface dark:text-dark-on-surface">User:</span> Does FortiVoice integrate with HubSpot and support Hindi?';
+        line2.innerHTML = '<span class="font-semibold text-dark-tertiary">FortiVoice:</span> Yes — native HubSpot sync and natural EN/HI voice switching in 380ms.';
+      }
+    }
+
+    function toggleVoiceCall() {
+      callActive = !callActive;
+      const stage = document.getElementById('voice-orb-stage');
+      const btn = document.getElementById('voice-cta-btn');
+      const icon = document.getElementById('voice-cta-icon');
+      const label = document.getElementById('voice-cta-label');
+      const statusText = document.getElementById('status-pill-text');
+
+      if (callActive) {
+        callSeconds = 0;
+        stage.classList.add('orb-active');
+        icon.textContent = 'call_end';
+        label.textContent = 'End Voice Call';
+        btn.classList.remove('bg-light-primary', 'dark:bg-dark-primary', 'text-light-on-primary', 'dark:text-dark-on-primary');
+        btn.classList.add('bg-dark-error', 'text-dark-on-error');
+        statusText.textContent = 'Listening • 00:00';
+        callTimer = setInterval(() => {
+          callSeconds += 1;
+          const m = String(Math.floor(callSeconds / 60)).padStart(2, '0');
+          const s = String(callSeconds % 60).padStart(2, '0');
+          statusText.textContent = `Listening • ${m}:${s}`;
+        }, 1000);
+      } else {
+        clearInterval(callTimer);
+        stage.classList.remove('orb-active');
+        icon.textContent = 'mic';
+        label.textContent = 'Start Voice Call';
+        btn.classList.remove('bg-dark-error', 'text-dark-on-error');
+        btn.classList.add('bg-light-primary', 'dark:bg-dark-primary', 'text-light-on-primary', 'dark:text-dark-on-primary');
+        statusText.textContent = currentLang === 'hi' ? 'तैयार • Bilingual HI/EN' : 'Ready • Bilingual EN/HI';
+      }
+    }
+
+    function updateCaptions(userText, agentText) {
+      const line1 = document.getElementById('caption-line-1');
+      const line2 = document.getElementById('caption-line-2');
+      const history = document.getElementById('transcript-history');
+
+      line1.innerHTML = '<span class="font-semibold text-light-on-surface dark:text-dark-on-surface">User:</span> ' + userText;
+      line2.innerHTML = '<span class="font-semibold text-dark-tertiary">FortiVoice:</span> ' + agentText;
+
+      const uP = document.createElement('p');
+      uP.className = 'font-body text-body-md text-light-on-surface-variant dark:text-dark-on-surface-variant';
+      uP.innerHTML = '<span class="font-semibold text-light-on-surface dark:text-dark-on-surface">User:</span> ';
+      uP.appendChild(document.createTextNode(userText));
+
+      const aP = document.createElement('p');
+      aP.className = 'font-body text-body-md text-light-on-surface dark:text-dark-on-surface';
+      aP.innerHTML = '<span class="font-semibold text-dark-tertiary">FortiVoice:</span> ';
+      aP.appendChild(document.createTextNode(agentText));
+
+      history.appendChild(uP);
+      history.appendChild(aP);
+    }
+
+    function getReplyForPrompt(text) {
+      const lower = text.toLowerCase();
+      if (lower.includes('pricing') || lower.includes('hubspot')) {
+        return 'FortiVoice starts at $890/mo with native HubSpot two-way sync included — about 70% less than adding manual SDR coverage.';
+      }
+      if (lower.includes('soc2') || lower.includes('security')) {
+        return 'We are SOC 2 Type II certified with zero-data-retention LLM routing and full GDPR compliance.';
+      }
+      if (lower.includes('book') || lower.includes('demo')) {
+        return 'I have tomorrow at 10:30 AM IST or 9:00 AM PST open with our solutions team — shall I send the calendar invite?';
+      }
+      return currentLang === 'hi'
+        ? 'धन्यवाद! मैं आपके प्रोडक्ट और डेमो से जुड़े सभी सवालों का तुरंत जवाब दे सकता हूँ।'
+        : 'Got it — I can walk you through pricing, HubSpot integration, or book a live 15-minute demo right now.';
+    }
+
+    function sendQuickPrompt(promptText) {
+      const reply = getReplyForPrompt(promptText);
+      updateCaptions(promptText, reply);
+    }
+
+    function handlePromptSubmit(event) {
+      event.preventDefault();
+      const input = document.getElementById('dock-input');
+      const val = input.value.trim();
+      if (!val) return;
+      input.value = '';
+      sendQuickPrompt(val);
+    }
+
+    function toggleCrmDrawer(open) {
+      const drawer = document.getElementById('crm-drawer');
+      const backdrop = document.getElementById('crm-drawer-backdrop');
+      if (open) {
+        drawer.classList.remove('hidden');
+        backdrop.classList.remove('hidden');
+      } else {
+        drawer.classList.add('hidden');
+        backdrop.classList.add('hidden');
+      }
+    }
+
+    function toggleTranscriptModal(open) {
+      const modal = document.getElementById('transcript-modal');
+      if (open) {
+        modal.classList.remove('hidden');
+      } else {
+        modal.classList.add('hidden');
+      }
+    }
+  </script>
+
+
+</body></html>
+take reference from this
+and design ui/ux
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-25T21:50:22+05:30.
+
+The user's current state is as follows:
+Active Document: c:\Users\Asus\Desktop\Voice Agent\backend\.env (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 2
+Other open documents:
+- c:\Users\Asus\Desktop\Voice Agent\README.md (LANGUAGE_UNSPECIFIED)
+- c:\Users\Asus\Desktop\Voice Agent\frontend\src\index.css (LANGUAGE_UNSPECIFIED)
+- c:\Users\Asus\Desktop\Voice Agent\backend\server.js (LANGUAGE_UNSPECIFIED)
+- c:\Users\Asus\Desktop\Voice Agent\backend\agent.js (LANGUAGE_UNSPECIFIED)
+- c:\Users\Asus\Desktop\Voice Agent\frontend\src\components\LeftPanel\CallControls.jsx (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>

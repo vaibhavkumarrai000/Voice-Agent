@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #090A0F;
+    color: #F8FAFC;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: "Inter", sans-serif;
+  }
+  ::selection {
+    background-color: rgba(99, 102, 241, 0.3);
+  }
+}
+
+/* Material Symbols alignment */
+.material-symbols-outlined, 
+.material-symbols-rounded, 
+.material-symbols-sharp, 
+.material-icons {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1 !important;
+  box-sizing: content-box;
+  overflow: hidden;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align: middle;
+}
+
+/* 3D Voice Orb Breathing & Ring Pulsing Keyframes */
+@keyframes orb-breathe {
+  0%, 100% { transform: scale(1); opacity: 0.75; }
+  50% { transform: scale(1.06); opacity: 0.98; }
+}
+
+@keyframes ring-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.35; }
+  50% { transform: scale(1.08); opacity: 0.65; }
+}
+
+@keyframes orb-listening-wave {
+  0%, 100% { transform: scale(1); opacity: 0.8; filter: drop-shadow(0 0 24px rgba(34, 197, 94, 0.45)); }
+  50% { transform: scale(1.08); opacity: 1; filter: drop-shadow(0 0 38px rgba(34, 197, 94, 0.75)); }
+}
+
+@keyframes orb-speaking-wave {
+  0%, 100% { transform: scale(1); opacity: 0.85; filter: drop-shadow(0 0 28px rgba(34, 211, 238, 0.55)); }
+  50% { transform: scale(1.09); opacity: 1; filter: drop-shadow(0 0 46px rgba(168, 85, 247, 0.8)); }
+}
+
+.orb-active .orb-core {
+  animation: orb-breathe 2.4s ease-in-out infinite;
+}
+.orb-active .orb-ring-1 {
+  animation: ring-pulse 2.2s ease-in-out infinite;
+}
+.orb-active .orb-ring-2 {
+  animation: ring-pulse 2.8s ease-in-out infinite 0.35s;
+}
+
+.orb-listening .orb-core {
+  animation: orb-listening-wave 2s ease-in-out infinite;
+}
+.orb-speaking .orb-core {
+  animation: orb-speaking-wave 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb-active .orb-core,
+  .orb-active .orb-ring-1,
+  .orb-active .orb-ring-2,
+  .orb-listening .orb-core,
+  .orb-speaking .orb-core {
+    animation: none;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(9, 10, 15, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(38, 42, 59, 0.8);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.8);
+}

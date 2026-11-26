@@ -1,0 +1,137 @@
+{
+  "product": {
+    "name": "HelpingHand AI",
+    "category": "Enterprise B2B Revenue Intelligence & Autonomous CRM",
+    "tagline": "The self-driving CRM that turns sales conversations into qualified pipeline and closed revenue.",
+    "overview": "HelpingHand AI combines real-time conversational AI, automated pipeline governance, and autonomous lead qualification to reduce rep administrative burden by 80% while accelerating sales velocity."
+  },
+  "pricing": {
+    "model": "Per seat / billed annually (monthly billing available at 15% surcharge)",
+    "tiers": [
+      {
+        "name": "Starter",
+        "pricePerSeatMonth": 49,
+        "idealFor": "Early-stage sales teams (1-5 reps) needing modern CRM basics without complex setup",
+        "features": [
+          "Core pipeline & contact management",
+          "Automated email & calendar bi-directional sync (Gmail & Outlook)",
+          "Basic lead scoring & task automation",
+          "Standard email & chat support",
+          "Up to 10,000 active contacts"
+        ]
+      },
+      {
+        "name": "Growth",
+        "pricePerSeatMonth": 99,
+        "popular": true,
+        "idealFor": "Scaling SaaS companies (5-30 reps) requiring real-time conversational AI and automated qualification",
+        "features": [
+          "Everything in Starter plus:",
+          "Autonomous AI Voice & Chat Qualification Agent",
+          "Real-time BANT qualification & sentiment analysis",
+          "Automated meeting scheduling & calendar hold injection",
+          "Custom sales sequence workflows & playbooks",
+          "HubSpot 1-click automated bi-directional migration",
+          "Advanced analytics, win-rate forecasts & pipeline health alerts",
+          "Priority support with 4-hour SLA"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "pricePerSeatMonth": 199,
+        "idealFor": "Mid-market & enterprise revenue organizations (30+ reps) with custom compliance & governance needs",
+        "features": [
+          "Everything in Growth plus:",
+          "Dedicated Solutions Engineer & white-glove migration assistance",
+          "SOC 2 Type II compliance pack & custom BAA agreements for HIPAA",
+          "Enterprise SSO (SAML 2.0, Okta, Azure AD) & SCIM provisioning",
+          "Custom AI model fine-tuning with zero-data-retention guarantee",
+          "Dedicated Customer Success Manager & 99.99% uptime SLA",
+          "Role-based access control (RBAC) & immutable audit logging",
+          "Unlimited custom integrations via Webhooks & GraphQL API"
+        ]
+      }
+    ],
+    "discounts": {
+      "annualBilling": "15% off total annual commitment",
+      "nonProfitEdu": "25% discount for qualified institutions",
+      "multiYearCommitment": "Custom volume pricing available for teams exceeding 50 seats"
+    }
+  },
+  "securityCompliance": {
+    "soc2Status": "SOC 2 Type II Certified (Audited annually by Schellman & Co.)",
+    "certifications": [
+      "SOC 2 Type II (Security, Availability, and Confidentiality trust principles)",
+      "ISO/IEC 27001:2022 Certified",
+      "HIPAA Compliant with standard Business Associate Agreement (BAA)",
+      "GDPR & CCPA/CPRA Compliant"
+    ],
+    "dataProtection": {
+      "encryptionAtRest": "AES-256 bit encryption across all databases and customer storage volumes",
+      "encryptionInTransit": "TLS 1.3 enforced for all API, voice streaming, and web traffic",
+      "keyManagement": "AWS KMS / GCP Cloud KMS with optional customer-managed keys (BYOK) on Enterprise",
+      "dataResidency": "Regional data hosting available in US-East (N. Virginia), EU (Frankfurt), and APAC (Tokyo)"
+    },
+    "aiPrivacyGuarantee": {
+      "trainingPolicy": "HelpingHand AI STRICTLY DOES NOT use customer tenant data, voice recordings, or transcripts to train public AI foundation models.",
+      "retention": "Voice audio streams are processed in ephemeral memory buffers and purged immediately post-transcription unless customer enables compliance archiving."
+    }
+  },
+  "hubspotMigration": {
+    "supportLevel": "Full turnkey migration supported with 1-click wizard or white-glove engineering",
+    "migrationTime": "Under 45 minutes for typical instances (< 250,000 records)",
+    "capabilities": [
+      "1-Click Automated Connector via HubSpot OAuth 2.0 app",
+      "Complete historical preservation: Contacts, Companies, Deals, Custom Properties, Notes, and Call Recordings",
+      "Zero Downtime Guarantee: Dual-sync capability allows teams to test HelpingHand AI while HubSpot runs simultaneously with zero lead leakage",
+      "Pre-flight schema mapping & automated data cleansing (deduplication of duplicate contacts and invalid emails)",
+      "Complimentary 14-day transition overlap period with no double billing"
+    ],
+    "onboardingSupport": "Teams with 15+ seats receive a dedicated Migration Engineer who manages schema validation, workflow reproduction, and team training workshops."
+  },
+  "salesObjectionHandlers": [
+    {
+      "id": "obj_01_locked_contract",
+      "objection": "We are already locked into HubSpot / Salesforce for the next 6 to 9 months and cannot justify double-paying.",
+      "category": "Contractual / Timing",
+      "responseFramework": {
+        "acknowledgement": "I completely understand—nobody wants to pay for two CRM platforms at once while locked into an annual contract.",
+        "valueProposition": "That is exactly why we run our 'Seamless Transition Bridge Program'. We will credit your HelpingHand AI licensing cost for up to 6 months to offset your remaining legacy vendor contract.",
+        "actionStep": "We can set up your sandbox and run the 1-click migration now. Your team gets access to our autonomous voice qualification agent immediately, and your first billing cycle won't begin until your HubSpot contract formally ends.",
+        "suggestedClosingQuestion": "If we cover the gap until your current term expires, would you be open to a 20-minute architecture review this Thursday?"
+      }
+    },
+    {
+      "id": "obj_02_data_security_ai",
+      "objection": "We have strict SOC 2 and customer data governance rules. We cannot have an AI agent listening to sales calls and training on our proprietary conversations.",
+      "category": "Security & Compliance",
+      "responseFramework": {
+        "acknowledgement": "Security and compliance are non-negotiable, especially when introducing AI into customer-facing conversations.",
+        "valueProposition": "HelpingHand AI is SOC 2 Type II certified and HIPAA compliant. Under our enterprise contractual guarantee, your conversation audio and transcripts are never stored in public models or used for third-party AI training.",
+        "actionStep": "All data is encrypted in-flight with TLS 1.3 and at-rest with AES-256. We also offer Bring-Your-Own-Key (BYOK) and dedicated VPC isolation so you retain complete cryptographic ownership.",
+        "suggestedClosingQuestion": "I can send over our Schellman SOC 2 Type II audit report and standard DPA/BAA package right now. Who on your InfoSec team should I copy?"
+      }
+    },
+    {
+      "id": "obj_03_adoption_complexity",
+      "objection": "Our sales reps hate learning new software. The last time we rolled out a new sales tool, adoption was under 30% and caused massive friction.",
+      "category": "Change Management / Rep Adoption",
+      "responseFramework": {
+        "acknowledgement": "That is the #1 reason CRM initiatives fail—reps want to sell, not spend two hours every evening doing manual data entry in complex software.",
+        "valueProposition": "HelpingHand AI was built around 'Zero-Admin' philosophy. The autonomous voice agent handles prospect intake, automatically extracts BANT metrics, generates meeting notes, and updates CRM deal stages without reps typing a single line.",
+        "actionStep": "Because it plugs directly into existing Google Meet, Zoom, and phone dialers, the learning curve is less than 30 minutes. Across our customer base, 30-day active adoption is 94%.",
+        "suggestedClosingQuestion": "Would you like to see a live 2-minute demo of the autonomous voice agent qualifying a simulated inbound lead?"
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can the AI Voice Agent speak multiple languages?",
+      "answer": "Yes, HelpingHand AI natively supports real-time multi-lingual interactions including English (US, UK, Indian accents) and Hindi, dynamically detecting prospect language preferences."
+    },
+    {
+      "question": "How does appointment booking work during a call?",
+      "answer": "The voice agent connects directly with Google Calendar and Microsoft 365, verifying rep availability in real-time and negotiating an agreed slot with the lead before sending calendar invites instantly."
+    }
+  ]
+}
